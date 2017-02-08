@@ -1,0 +1,29 @@
+name:                plotting
+version:             0.0.1.0
+-- synopsis:
+description:         command line plotting tools
+license:             BSD3
+license-file:        LICENSE
+author:              Zach Sullivan
+maintainer:          zsulliva@cs.uoregon.edu
+-- copyright:
+-- category:
+build-type:          Simple
+extra-source-files:  ChangeLog.md, README.md
+cabal-version:       >=1.10
+
+executable plotter
+  main-is:             Plotting.Plotter.hs
+  build-depends:       base  >= 4.9 && <4.10,
+                       Chart >= 1.8,
+                       logfloat >= 0.1
+  hs-source-dirs:      haskell
+
+library
+  exposed-modules:     Plotting.Density
+
+  build-depends:       base  >= 4.9 && <4.10,
+                       Chart >= 1.8,
+                       logfloat >= 0.1
+  hs-source-dirs:      haskell
+  default-language:    Haskell2010
