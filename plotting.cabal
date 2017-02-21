@@ -13,17 +13,20 @@ extra-source-files:  ChangeLog.md, README.md
 cabal-version:       >=1.10
 
 executable plotter
-  main-is:             Plotting.Plotter.hs
-  build-depends:       base  >= 4.9 && <4.10,
-                       Chart >= 1.8,
-                       logfloat >= 0.1
+  main-is:             Plotting/Plotter.hs
+  build-depends:       base                 >= 4.9 && <4.10,
+                       gnuplot              >= 0.5,
+                       optparse-applicative >= 0.11,
+                       logfloat             >= 0.1
   hs-source-dirs:      haskell
+  default-language:    Haskell2010
 
 library
   exposed-modules:     Plotting.Density
 
-  build-depends:       base  >= 4.9 && <4.10,
-                       Chart >= 1.8,
+  build-depends:       base     >= 4.9 && <4.10,
+                       gnuplot  >= 0.5,
                        logfloat >= 0.1
+
   hs-source-dirs:      haskell
   default-language:    Haskell2010
